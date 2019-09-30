@@ -1,6 +1,7 @@
 package model;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
 
@@ -10,7 +11,7 @@ public class Offer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idOffer;
-    private Date dateOfferMade;
+    private LocalDate dateOfferMade;
 
 
     @ManyToOne
@@ -37,11 +38,11 @@ public class Offer {
         this.client = client;
     }
 
-    public Date getDateOfferMade() {
+    public LocalDate getDateOfferMade() {
         return dateOfferMade;
     }
 
-    public void setDateOfferMade(Date dateOfferMade) {
+    public void setDateOfferMade(LocalDate dateOfferMade) {
         this.dateOfferMade = dateOfferMade;
     }
 

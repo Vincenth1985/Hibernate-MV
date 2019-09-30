@@ -2,7 +2,7 @@ package model;
 
 
 import javax.persistence.*;
-import java.util.Date;
+import java.time.LocalDate;
 
 @Entity
 public class Order {
@@ -11,7 +11,7 @@ public class Order {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer orderId;
-    private Date transformationDate;
+    private LocalDate transformationDate;
 
 
     @OneToOne
@@ -26,11 +26,11 @@ public class Order {
         this.orderId = orderId;
     }
 
-    public Date getTransformationDate() {
+    public LocalDate getTransformationDate() {
         return transformationDate;
     }
 
-    public void setTransformationDate(Date transformationDate) {
+    public void setTransformationDate(LocalDate transformationDate) {
         this.transformationDate = transformationDate;
     }
 

@@ -1,12 +1,12 @@
 package model;
 
 
-import com.sun.scenario.effect.Identity;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import java.time.LocalDate;
+import java.util.Date;
 
 @Entity
 public class Client {
@@ -15,9 +15,9 @@ public class Client {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer clientId;
     private String name;
-    private String Adress;
+    private String address;
     private String phoneNumber;
-    private String birthDay;
+    private LocalDate birthday;
 
 
     public Integer getClientId() {
@@ -36,12 +36,12 @@ public class Client {
         this.name = name;
     }
 
-    public String getAdress() {
-        return Adress;
+    public String getAddress() {
+        return address;
     }
 
-    public void setAdress(String adress) {
-        Adress = adress;
+    public void setAddress(String address) {
+        this.address = address;
     }
 
     public String getPhoneNumber() {
@@ -52,11 +52,11 @@ public class Client {
         this.phoneNumber = phoneNumber;
     }
 
-    public String getBirthDay() {
-        return birthDay;
+    public LocalDate getBirthday() {
+        return birthday;
     }
 
-    public void setBirthDay(String birthDay) {
-        this.birthDay = birthDay;
+    public void setBirthday(LocalDate birthday) {
+        this.birthday = birthday;
     }
 }
