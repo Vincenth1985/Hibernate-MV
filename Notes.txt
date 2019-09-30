@@ -1,0 +1,133 @@
+4 entities: Product - Offer - Order - Client
+=================================================
+
+NOTE: Offer cannot save products to the DB (however right now we dont give a fuck)
+NOTE: Many offers To One Client
+NOTE: Many offers To Many Products
+NOTE: One order To One Offer
+
+=================================================
+
+Offer <- Products
+Offer <- Client
+
+Order <- Offer
+
+=================================================
+
+Product:
+    - ID
+    - Name
+    - Price
+
+Offer: 
+    - ID
+    - Client
+    - List<Product>
+    - Date Offer Made
+    
+Order:
+    - ID
+    - Offre
+    - Date Transformation
+    
+Client: 
+    - ID
+    - Name
+    - Adress
+    - PhoneNR
+    - Birthdate
+
+=================================================
+
+MAIN -> WINDOWCONTROLLER -> MODELCONTROLLER -> ProductRepository -> ProductMapper
+                                            -> OfferRepository -> OfferMapper
+                                            -> OrderRepository -> OrderMapper
+                                            -> ClientRepository -> ClientMapper
+
+TOOLS: 
+    - EntityManagerFactoryProvider
+
+=================================================
+
+MAIN:
+    - main
+    - start
+
+WINDOWCONTROLLER:
+    - createClient
+    - createOffer
+    - createProduct
+
+    - getClient
+    - getOffer
+    - getBestelling
+    - getProduct
+
+    - deleteOffer
+    - deleteBestelling
+    - deleteClient
+    - deleteProduct
+
+    - printClient
+    - printProduct
+    - printOrder
+    - printOffer
+
+    - updateProduct
+    - updateClient
+    - updateOrder
+    - updateOffer
+
+    - addClientToOffer
+    - addProductsToOffer
+
+    - removeProductsFromOffer
+
+    - confirmOffer
+
+MODELCONTROLLER:
+    - initialiseRepositories
+    - Same as windowcontroller
+
+REPOSITORIES:
+    - CreateX (except Order)
+    - getX
+    - deleteX
+    - printX
+    - updateX
+
+OFFERREPOSITORY:
+    - addClientToOffer
+    - addProductToOffer
+    - removeProductFromOffer
+
+ORDERREPOSITORY:
+    - confirmOffer
+
+MAPPER:
+    - createX
+    - getX
+    - deleteX
+    - updateX
+
+ENTITYMANAGEFACTORYPROVIDE:
+    - getEM
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
