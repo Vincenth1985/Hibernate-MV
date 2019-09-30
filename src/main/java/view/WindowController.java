@@ -3,6 +3,20 @@ package view;
 import javafx.fxml.FXML;
 
 public class WindowController {
+    // --------------------- REPOSITORIES ---------------------
+    private ProductRepository productRepository;
+    private OfferRepository offerRepository;
+    private OrderRepository orderRepository;
+    private ClientRepository clientRepository;
+
+    // --------------------- INITIALIZE ---------------------
+    @FXML
+    private void initialize() {
+        productRepository = new ProductRepository();
+        offerRepository = new OfferRepository();
+        orderRepository = new OrderRepository();
+        clientRepository = new ClientRepository();
+    }
 
     // --------------------- CREATE ---------------------
     @FXML
@@ -122,7 +136,8 @@ public class WindowController {
     }
 
     // --------------------- CONFIRM ---------------------
-    @FXML private void confirmOrder() {
+    @FXML
+    private void confirmOrder() {
 
     }
 }

@@ -91,7 +91,7 @@ MODELCONTROLLER:
     - Same as windowcontroller
 
 REPOSITORIES:
-    - CreateX (except Order)
+    - CreateX
     - getX
     - deleteX
     - printX
