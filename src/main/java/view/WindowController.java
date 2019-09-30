@@ -1,6 +1,10 @@
 package view;
 
 import javafx.fxml.FXML;
+import repository.ClientRepository;
+import repository.OfferRepository;
+import repository.OrderRepository;
+import repository.ProductRepository;
 
 public class WindowController {
     // --------------------- REPOSITORIES ---------------------
@@ -42,6 +46,7 @@ public class WindowController {
 
     @FXML
     private void getOffer() {
+
 
     }
 
