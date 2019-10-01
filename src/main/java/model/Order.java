@@ -15,8 +15,15 @@ public class Order {
     private LocalDate transformationDate;
 
 
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
     private Offer offer;
+
+
+    public void clone(Order order) {
+        this.orderId = order.getOrderId();
+        this.transformationDate = order.getTransformationDate();
+        this.offer = order.getOffer();
+    }
 
 
     public Integer getOrderId() {
@@ -42,4 +49,6 @@ public class Order {
     public void setOffer(Offer offer) {
         this.offer = offer;
     }
+
+
 }

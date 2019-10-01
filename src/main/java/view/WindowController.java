@@ -1,10 +1,19 @@
 package view;
 
 import data.ClientMapper;
+<<<<<<< HEAD
 import data.OfferMapper;
 import javafx.fxml.FXML;
 import model.Client;
 import model.Offer;
+=======
+import data.OrderMapper;
+import data.ProductMapper;
+import javafx.fxml.FXML;
+import model.Client;
+import model.Offer;
+import model.Order;
+>>>>>>> fc6c5ee08494de187da78db9764eb7f531b3f582
 import model.Product;
 import repository.ClientRepository;
 import repository.OfferRepository;
@@ -156,19 +165,7 @@ public class WindowController {
 
     // --------------------- TEST ---------------------
     @FXML
-    private void testButton(){
-        OfferMapper om = new OfferMapper();
-        Client newClient = new Client();
-        newClient.setAddress("A la maison");
-        newClient.setBirthday(LocalDate.EPOCH);
-        newClient.setName("Jean-Michel-Patrick-Pierre-Jean");
-        newClient.setPhoneNumber("0495 fais pas chier");
+    private void testButton() {
 
-        Offer offer = new Offer();
-        offer.setClient(newClient);
-        offer.setDateOfferMade(LocalDate.now());
-        offer.setProductList(new ArrayList<Product>());
-
-        om.createOffer(offer);
     }
 }

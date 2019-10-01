@@ -28,14 +28,6 @@ public class Product {
         return idProduct;
     }
 
-    public Integer getIdProduct() {
-        return idProduct;
-    }
-
-    public void setIdProduct(Integer idProduct) {
-        this.idProduct = idProduct;
-    }
-
     public void setId(Integer id) {
         this.idProduct = id;
     }
