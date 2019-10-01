@@ -6,7 +6,7 @@ import javax.persistence.Persistence;
 
 public class EntityManagerFactoryProvider {
 
-    EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("?");
+    EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("datasourceLocal");
     EntityManager entityManager = entityManagerFactory.createEntityManager();
 
 
