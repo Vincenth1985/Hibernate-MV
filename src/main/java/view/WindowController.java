@@ -1,27 +1,10 @@
 package view;
 
-import data.ClientMapper;
-<<<<<<< HEAD
-import data.OfferMapper;
 import javafx.fxml.FXML;
-import model.Client;
-import model.Offer;
-=======
-import data.OrderMapper;
-import data.ProductMapper;
-import javafx.fxml.FXML;
-import model.Client;
-import model.Offer;
-import model.Order;
->>>>>>> fc6c5ee08494de187da78db9764eb7f531b3f582
-import model.Product;
 import repository.ClientRepository;
 import repository.OfferRepository;
 import repository.OrderRepository;
 import repository.ProductRepository;
-
-import java.time.LocalDate;
-import java.util.ArrayList;
 
 public class WindowController {
     // --------------------- REPOSITORIES ---------------------
