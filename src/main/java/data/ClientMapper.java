@@ -33,6 +33,7 @@ public class ClientMapper {
         EntityTransaction transaction = em.getTransaction();
 
         transaction.begin();
+        client = em.find(Client.class, client.getClientId());
         em.remove(client);
         transaction.commit();
 

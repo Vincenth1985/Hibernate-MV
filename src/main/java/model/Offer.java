@@ -13,14 +13,18 @@ public class Offer {
     private Integer idOffer;
     private LocalDate dateOfferMade;
 
-
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     private Client client;
 
-
-    @ManyToMany
+    @ManyToMany(cascade = CascadeType.ALL)
     private List<Product> productList;
 
+    public void cloneFrom(Offer offer) {
+        this.client = offer.client;
+        this.dateOfferMade = offer.dateOfferMade;
+        this.idOffer = offer.idOffer;
+        this.productList = offer.productList;
+    }
 
     public Integer getIdOffer() {
         return idOffer;

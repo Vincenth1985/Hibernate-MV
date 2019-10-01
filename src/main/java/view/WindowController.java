@@ -1,14 +1,18 @@
 package view;
 
 import data.ClientMapper;
+import data.OfferMapper;
 import javafx.fxml.FXML;
 import model.Client;
+import model.Offer;
+import model.Product;
 import repository.ClientRepository;
 import repository.OfferRepository;
 import repository.OrderRepository;
 import repository.ProductRepository;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 
 public class WindowController {
     // --------------------- REPOSITORIES ---------------------
@@ -153,14 +157,18 @@ public class WindowController {
     // --------------------- TEST ---------------------
     @FXML
     private void testButton(){
-        ClientMapper cm = new ClientMapper();
+        OfferMapper om = new OfferMapper();
         Client newClient = new Client();
         newClient.setAddress("A la maison");
         newClient.setBirthday(LocalDate.EPOCH);
         newClient.setName("Jean-Michel-Patrick-Pierre-Jean");
         newClient.setPhoneNumber("0495 fais pas chier");
 
-        cm.createClient(newClient);
-        cm.deleteClient(newClient);
+        Offer offer = new Offer();
+        offer.setClient(newClient);
+        offer.setDateOfferMade(LocalDate.now());
+        offer.setProductList(new ArrayList<Product>());
+
+        om.createOffer(offer);
     }
 }
