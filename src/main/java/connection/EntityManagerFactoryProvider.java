@@ -6,8 +6,11 @@ import javax.persistence.Persistence;
 
 public class EntityManagerFactoryProvider {
 
-    EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("datasourceLocal");
-    EntityManager entityManager = entityManagerFactory.createEntityManager();
+    private static final EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("datasourceLocal");
+
+    public static EntityManager getEM() {
+        return entityManagerFactory.createEntityManager();
+    }
 
 
 }
