@@ -15,7 +15,6 @@ public class ClientMapper {
         transaction.begin();
         em.persist(client);
         transaction.commit();
-        System.out.println(client.getClientId());
 
         em.close();
         return client;

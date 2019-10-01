@@ -1,10 +1,14 @@
 package view;
 
+import data.ClientMapper;
 import javafx.fxml.FXML;
+import model.Client;
 import repository.ClientRepository;
 import repository.OfferRepository;
 import repository.OrderRepository;
 import repository.ProductRepository;
+
+import java.time.LocalDate;
 
 public class WindowController {
     // --------------------- REPOSITORIES ---------------------
@@ -144,5 +148,19 @@ public class WindowController {
     @FXML
     private void confirmOrder() {
 
+    }
+
+    // --------------------- TEST ---------------------
+    @FXML
+    private void testButton(){
+        ClientMapper cm = new ClientMapper();
+        Client newClient = new Client();
+        newClient.setAddress("A la maison");
+        newClient.setBirthday(LocalDate.EPOCH);
+        newClient.setName("Jean-Michel-Patrick-Pierre-Jean");
+        newClient.setPhoneNumber("0495 fais pas chier");
+
+        cm.createClient(newClient);
+        cm.deleteClient(newClient);
     }
 }
