@@ -1,8 +1,13 @@
 package view;
 
 import data.ClientMapper;
+import data.OrderMapper;
+import data.ProductMapper;
 import javafx.fxml.FXML;
 import model.Client;
+import model.Offer;
+import model.Order;
+import model.Product;
 import repository.ClientRepository;
 import repository.OfferRepository;
 import repository.OrderRepository;
@@ -152,15 +157,11 @@ public class WindowController {
 
     // --------------------- TEST ---------------------
     @FXML
-    private void testButton(){
-        ClientMapper cm = new ClientMapper();
-        Client newClient = new Client();
-        newClient.setAddress("A la maison");
-        newClient.setBirthday(LocalDate.EPOCH);
-        newClient.setName("Jean-Michel-Patrick-Pierre-Jean");
-        newClient.setPhoneNumber("0495 fais pas chier");
+    private void testButton() {
 
-        cm.createClient(newClient);
-        cm.deleteClient(newClient);
+
+
+
+
     }
 }

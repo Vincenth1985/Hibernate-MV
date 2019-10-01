@@ -7,7 +7,6 @@ import model.Product;
 public class OfferMapper {
 
 
-    private OfferMapper offerMapper;
 
 
     public Offer addClientToOffer(Client client, Offer offer) {

@@ -33,6 +33,7 @@ public class ProductMapper {
     public Product deleteProduct(Product product) {
         EntityManager entityManager = EntityManagerFactoryProvider.getEM();
         entityManager.getTransaction().begin();
+        product = entityManager.find(Product.class, product.getId());
         entityManager.remove(product);
         entityManager.getTransaction().commit();
         entityManager.close();
