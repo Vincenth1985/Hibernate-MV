@@ -4,29 +4,25 @@ import data.ProductMapper;
 import model.Product;
 
 public class ProductRepository {
-
-
     private ProductMapper productMapper;
 
-
-    public Product createProduct(Product Product) {
+    public Product createProduct() {
         return null;
     }
 
-    public Product getProduct(Integer id) {
-
+    public Product getProduct() {
         return null;
     }
 
-    public Product deleteProduct(Product product) {
+    public Product deleteProduct() {
         return null;
     }
 
-    public Product updateProduct(Product product) {
+    public Product updateProduct() {
         return null;
     }
 
-    public void printProduct(Product product) {
+    public void printProduct() {
     }
 
 

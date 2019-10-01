@@ -5,33 +5,29 @@ import model.Offer;
 import model.Order;
 
 public class OrderRepository {
-
-
     private OrderMapper orderMapper;
 
-
-
-    public Order confirmOrder(Offer offer) {
+    public Order confirmOrder() {
         return null;
     }
 
-    public Order createOrder(Order order) {
+    public Order createOrder() {
         return null;
     }
 
-    public Order getOrder(Integer id) {
+    public Order getOrder() {
         return null;
     }
 
-    public Order deleteOrder(Order order) {
+    public Order deleteOrder() {
         return null;
     }
 
-    public Order updateOrder(Order order) {
+    public Order updateOrder() {
         return null;
     }
 
-    public void printOrder(Order order) {
+    public void printOrder() {
     }
 
 
