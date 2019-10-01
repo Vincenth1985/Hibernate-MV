@@ -4,6 +4,7 @@ import connection.EntityManagerFactoryProvider;
 import model.Product;
 
 import javax.persistence.EntityManager;
+import javax.persistence.EntityTransaction;
 
 
 public class ProductMapper {
@@ -13,8 +14,8 @@ public class ProductMapper {
 
     public Product createProduct(Product product) {
         EntityManager entityManager = EntityManagerFactoryProvider.getEM();
-        entityManager.persist(product);
         entityManager.getTransaction().begin();
+        entityManager.persist(product);
         entityManager.getTransaction().commit();
         entityManager.close();
         return product;
@@ -22,8 +23,8 @@ public class ProductMapper {
 
     public Product getProduct(Integer id) {
         EntityManager entityManager = EntityManagerFactoryProvider.getEM();
-        Product product = entityManager.find(Product.class, id);
         entityManager.getTransaction().begin();
+        Product product = entityManager.find(Product.class, id);
         entityManager.getTransaction().commit();
         entityManager.close();
         return product;
@@ -31,8 +32,8 @@ public class ProductMapper {
 
     public Product deleteProduct(Product product) {
         EntityManager entityManager = EntityManagerFactoryProvider.getEM();
-        entityManager.remove(product);
         entityManager.getTransaction().begin();
+        entityManager.remove(product);
         entityManager.getTransaction().commit();
         entityManager.close();
         return product;
@@ -40,7 +41,17 @@ public class ProductMapper {
 
     public Product updateProduct(Product product) {
 
-        return product;
+        EntityManager em = EntityManagerFactoryProvider.getEM();
+        EntityTransaction transaction = em.getTransaction();
+
+        transaction.begin();
+        Product dbProduct = em.find(Product.class, product.getId());
+        dbProduct.cloneFrom(product);
+        transaction.commit();
+
+        em.close();
+        return dbProduct;
+
     }
 
 }

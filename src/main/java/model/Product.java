@@ -13,6 +13,12 @@ public class Product {
     private String name;
     private Double price;
 
+    public void cloneFrom(Product product) {
+        this.idProduct = product.getId();
+        this.name = product.getName();
+        this.price = product.getPrice();
+    }
+
 
     @ManyToMany
     private List<Offer> offerList;
