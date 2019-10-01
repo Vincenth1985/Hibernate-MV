@@ -19,6 +19,13 @@ public class Client {
     private String phoneNumber;
     private LocalDate birthday;
 
+    public void cloneFrom(Client client){
+        this.clientId = client.clientId;
+        this.name = client.name;
+        this.address = client.address;
+        this.phoneNumber = client.phoneNumber;
+        this.birthday = client.birthday;
+    }
 
     public Integer getClientId() {
         return clientId;
