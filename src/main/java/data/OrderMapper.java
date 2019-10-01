@@ -1,13 +1,24 @@
 package data;
 
+import connection.EntityManagerFactoryProvider;
 import model.Offer;
 import model.Order;
+
+import javax.persistence.EntityManager;
 
 public class OrderMapper {
 
 
     public Order confirmOrder(Offer offer) {
-        return null;
+        EntityManager em = EntityManagerFactoryProvider.getEM();
+        Order order = new Order();
+        order.setOffer(offer);
+        em.persist(order);
+        em.getTransaction().begin();
+        em.getTransaction().commit();
+        em.close();
+
+        return order;
     }
 
     public Order createOrder(Order order) {
@@ -26,6 +37,5 @@ public class OrderMapper {
         return null;
     }
 
-    public void printOrder(Order order) {
-    }
+
 }
