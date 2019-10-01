@@ -4,33 +4,23 @@ import model.Client;
 
 public class ClientMapper {
 
-
-
-    public Client createClient() {
-
-        return null;
-
-    }
-
-    public Client getClient() {
-
+    public Client createClient(Client client) {
         return null;
     }
 
-    public Client deleteClient() {
-
-
+    public Client getClient(Integer id) {
         return null;
     }
 
-    public Client updateClient() {
-
+    public Client deleteClient(Client client) {
         return null;
-
     }
 
-    public void printClient() {
+    public Client updateClient(Client client) {
+        return null;
+    }
 
+    public void printClient(Client Client) {
 
     }
 
