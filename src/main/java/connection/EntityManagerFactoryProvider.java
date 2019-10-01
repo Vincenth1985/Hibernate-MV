@@ -8,7 +8,7 @@ public class EntityManagerFactoryProvider {
 
     private static final EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("datasourceLocal");
 
-    public static EntityManager getEM(){
+    public static EntityManager getEM() {
         return entityManagerFactory.createEntityManager();
     }
 

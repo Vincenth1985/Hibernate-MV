@@ -1,6 +1,7 @@
 package repository;
 
 import data.OrderMapper;
+import model.Offer;
 import model.Order;
 
 public class OrderRepository {
@@ -10,38 +11,27 @@ public class OrderRepository {
 
 
 
-    public Order confirmOrder() {
-
-        return null;
-
-    }
-
-    public Order createOrder() {
-
-        return null;
-
-    }
-
-    public Order getOrder() {
-
+    public Order confirmOrder(Offer offer) {
         return null;
     }
 
-    public Order deleteOrder() {
-
-
+    public Order createOrder(Order order) {
         return null;
     }
 
-    public Order updateOrder() {
-
+    public Order getOrder(Integer id) {
         return null;
-
     }
 
-    public void printOrder() {
+    public Order deleteOrder(Order order) {
+        return null;
+    }
 
+    public Order updateOrder(Order order) {
+        return null;
+    }
 
+    public void printOrder(Order order) {
     }
 
 

@@ -9,32 +9,24 @@ public class ProductRepository {
     private ProductMapper productMapper;
 
 
-    public Product createProduct() {
-
+    public Product createProduct(Product Product) {
         return null;
-
     }
 
-    public Product getProduct() {
+    public Product getProduct(Integer id) {
 
         return null;
     }
 
-    public Product deleteProduct() {
-
-
+    public Product deleteProduct(Product product) {
         return null;
     }
 
-    public Product updateProduct() {
-
+    public Product updateProduct(Product product) {
         return null;
-
     }
 
-    public void printProduct() {
-
-
+    public void printProduct(Product product) {
     }
 
 
